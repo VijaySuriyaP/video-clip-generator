@@ -1,5 +1,5 @@
 
-# YouTube Clip Generator
+#  Clip Generator
 
 Generate short, subtitle-burned clips from long videos using local AI transcription and FFmpeg.
 
