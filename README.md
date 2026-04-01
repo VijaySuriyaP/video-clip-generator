@@ -1,6 +1,6 @@
-#VIDEO-CLIP-GENERATOR
+#VIDEO-CLIP-GENEERATOR
 
-Generate short, subtitle-burned clips from long videos using local AI transcription and ffmpeg.
+Generate short, subtitle-burned clips from long videos using local AI transcription and FFmpeg.
 
 This app is built for creators who want to turn long-form recordings into social-ready highlights quickly.
 
@@ -16,7 +16,7 @@ This app is built for creators who want to turn long-form recordings into social
 
 - UI: Gradio 4+
 - Transcription: openai-whisper (local model)
-- Video processing: ffmpeg + ffmpeg-python
+- Video processing: FFmpeg + ffmpeg-python
 - Packaging: Python zipfile
 
 ## Project structure
@@ -43,8 +43,8 @@ clip_generator_app/
 - Python 3.10 or newer
 - FFmpeg available on PATH
   - Windows: https://ffmpeg.org/download.html
-  - macOS: brew install ffmpeg
-  - Linux: sudo apt install ffmpeg
+  - macOS: `brew install ffmpeg`
+  - Linux: `sudo apt install ffmpeg`
 
 ## Installation
 
@@ -70,23 +70,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-The app launches at:
-
-http://127.0.0.1:7860
-
-## Publish to GitHub
-
-This folder is not currently a git repository yet. Run these commands to publish it:
-
-```bash
-cd clip_generator_app
-git init
-git add .
-git commit -m "Add YouTube Clip Generator app"
-git branch -M main
-git remote add origin <your-github-repo-url>
-git push -u origin main
-```
+The app launches at http://127.0.0.1:7860.
 
 ## How to use
 
@@ -130,7 +114,7 @@ git push -u origin main
 
 - Clip summary table (start/end/word count/preview)
 - Individual MP4 files with burned subtitles
-- all_clips.zip containing all generated clips
+- `all_clips.zip` containing all generated clips
 
 Generated clips are written to a temporary output directory during processing.
 
@@ -138,24 +122,24 @@ Generated clips are written to a temporary output directory during processing.
 
 ### 127.0.0.1 refused to connect
 
-- Make sure dependencies are installed in the same Python environment used to run app.py
+- Make sure dependencies are installed in the same Python environment used to run `app.py`
 - Verify app is running and listening on port 7860
 - If needed, stop old processes and relaunch
 
 ### Video is not playable
 
 - Regenerate clips after updating to latest code
-- Ensure FFmpeg installation includes libx264 and AAC support
-- Confirm output is MP4 (H.264 + yuv420p + AAC)
+- Ensure FFmpeg installation includes `libx264` and AAC support
+- Confirm output is MP4 (`H.264` + `yuv420p` + `AAC`)
 
 ### ffmpeg not found
 
-- Add FFmpeg bin folder to PATH
+- Add FFmpeg `bin` folder to PATH
 - Restart terminal and VS Code after PATH changes
 
 ### Whisper is slow or runs out of memory
 
-- Use tiny or base model
+- Use `tiny` or `base` model
 - Close heavy apps
 - Prefer shorter source videos for quick tests
 
@@ -163,8 +147,22 @@ Generated clips are written to a temporary output directory during processing.
 
 This app runs locally on your machine. Video files and transcripts are processed on-device.
 
+## Publish to GitHub
+
+If this folder is not yet a git repository, run:
+
+```bash
+cd clip_generator_app
+git init
+git add .
+git commit -m "Add YouTube Clip Generator app"
+git branch -M main
+git remote add origin <your-github-repo-url>
+git push -u origin main
+```
+
 ## Acknowledgements
 
 - openai-whisper
-- ffmpeg
-- gradio
+- FFmpeg
+- Gradio
