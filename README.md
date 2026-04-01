@@ -1,4 +1,5 @@
 #VIDEO-CLIP-GENERATOR
+
 Generate short, subtitle-burned clips from long videos using local AI transcription and ffmpeg.
 
 This app is built for creators who want to turn long-form recordings into social-ready highlights quickly.
